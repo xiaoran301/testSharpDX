@@ -1,0 +1,9 @@
+D:\openProjects\testSharpDX\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\openProjects\testSharpDX\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\openProjects\testSharpDX\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\openProjects\testSharpDX\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+D:\openProjects\testSharpDX\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\openProjects\testSharpDX\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\openProjects\testSharpDX\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\openProjects\testSharpDX\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\openProjects\testSharpDX\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
