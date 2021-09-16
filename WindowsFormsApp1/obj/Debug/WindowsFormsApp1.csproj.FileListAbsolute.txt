@@ -7,3 +7,4 @@ D:\openProjects\testSharpDX\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.G
 D:\openProjects\testSharpDX\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 D:\openProjects\testSharpDX\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\openProjects\testSharpDX\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\openProjects\testSharpDX\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
