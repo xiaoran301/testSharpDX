@@ -1,0 +1,6 @@
+/WindowsFormsApp1/*.resx
+/WindowsFormsApp1/bin/Debug/*.pdb
+/WindowsFormsApp1/obj/Debug/*.cache
+/WindowsFormsApp1/obj/Debug/*.resources
+/WindowsFormsApp1/obj/Debug/*.pdb
+/WindowsFormsApp1/packages
