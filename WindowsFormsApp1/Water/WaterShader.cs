@@ -56,12 +56,12 @@ namespace WindowsFormsApp1.Water
         public WaterShader() { }
 
         // Methods
-        public bool Initialize(Device device, IntPtr windowsHandler)
+        public bool Init(Device device, IntPtr windowsHandler)
         {
             // Initialize the vertex and pixel shaders.
-            return InitializeShader(device, windowsHandler, "Water.vs", "Water.ps");
+            return InitShader(device, windowsHandler, "Water.vs", "Water.ps");
         }
-        private bool InitializeShader(Device device, IntPtr windowsHandler, string vsFileName, string psFileName)
+        private bool InitShader(Device device, IntPtr windowsHandler, string vsFileName, string psFileName)
         {
             try
             {

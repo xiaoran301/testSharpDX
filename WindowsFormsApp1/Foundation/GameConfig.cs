@@ -56,5 +56,19 @@ namespace WindowsFormsApp1.Foundation
                 Height = Screen.PrimaryScreen.Bounds.Height;
             }
         }
+
+        static GameConfig()
+        {
+            FullScreen = false;
+            VerticalSyncEnabled = false;
+            ScreenDepth = 1000.0f;   // 1000.0f
+            ScreenNear = 0.1f;      // 0.1f
+            BorderStyle = FormBorderStyle.None;
+
+            ShaderFilePath = @"Externals\Shaders\";
+            FontFilePath = @"Externals\Font\";
+            DataFilePath = @"Externals\Data\";
+            ModelFilePath = @"Externals\Models\";
+        }
     }
 }
