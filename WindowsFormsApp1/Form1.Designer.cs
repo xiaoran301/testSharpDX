@@ -1,6 +1,8 @@
 ﻿
 using System;
 using System.Diagnostics;
+using WindowsFormsApp1.Water;
+
 namespace WindowsFormsApp1
 {
     partial class Form1
@@ -74,6 +76,7 @@ namespace WindowsFormsApp1
         private void btnWater1_Click(object sender, EventArgs e)
         {
             Debug.WriteLine("Send to debug output.");
+            GameSystem.Start();
         }
 
 

@@ -79,8 +79,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Foundation\IGame.cs" />
+    <Compile Include="Foundation\Light.cs" />
+    <Compile Include="Foundation\RenderTexture.cs" />
+    <Compile Include="Foundation\Texture.cs" />
+    <Compile Include="Foundation\Transform.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Foundation\Camera.cs" />
+    <Compile Include="Foundation\DDX11.cs" />
+    <Compile Include="Water\Game.cs" />
+    <Compile Include="Foundation\GameConfig.cs" />
+    <Compile Include="Foundation\AsbGameSystem.cs" />
+    <Compile Include="Foundation\InputSystem.cs" />
+    <Compile Include="Foundation\TimeManager.cs" />
+    <Compile Include="Water\GameSystem.cs" />
+    <Compile Include="Water\ReflectionShader.cs" />
+    <Compile Include="Water\Water.cs" />
+    <Compile Include="Water\WaterShader.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,5 +123,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
