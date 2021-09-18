@@ -27,6 +27,8 @@ namespace WindowsFormsApp1.Foundation
         public static string ModelFilePath { get; set; }
         public static string FontFilePath { get; private set; }
 
+        public static bool TriggerReflection { get; set; }
+
         public static GameConfig Instance
         {
             get
@@ -69,6 +71,8 @@ namespace WindowsFormsApp1.Foundation
             FontFilePath = @"Externals\Font\";
             DataFilePath = @"Externals\Data\";
             ModelFilePath = @"Externals\Models\";
+
+            TriggerReflection = true;
         }
     }
 }
