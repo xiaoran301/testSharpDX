@@ -201,9 +201,9 @@ namespace WindowsFormsApp1.Water
             worldMatrix = D3D.WorldMatrix;
 
             // Render the terrain using the reflection view matrix and reflection clip plane.
-            //TerrainModel.Render(D3D.DeviceContext);
-            //if (!ReflectionShader.Render(D3D.DeviceContext, TerrainModel.IndexCount, worldMatrix, reflectionViewMatrix, projectionMatrix, TerrainModel.ColorTexture.TextureResource, TerrainModel.NormalMapTexture.TextureResource, Light.DiffuseColour, Light.Direction, 2.0f, clipPlane))
-            //    return false;
+            TerrainModel.Render(D3D.DeviceContext);
+            if (!ReflectionShader.Render(D3D.DeviceContext, TerrainModel.IndexCount, worldMatrix, reflectionViewMatrix, projectionMatrix, TerrainModel.ColorTexture.TextureResource, TerrainModel.NormalMapTexture.TextureResource, Light.DiffuseColour, Light.Direction, 2.0f, clipPlane))
+                return false;
 
             // Reset the render target back to the original back buffer and not the render to texture anymore.
             D3D.SetBackBufferRenderTarget();
