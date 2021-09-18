@@ -95,6 +95,8 @@
     <Compile Include="Foundation\TimeManager.cs" />
     <Compile Include="Water\GameSystem.cs" />
     <Compile Include="Water\ReflectionShader.cs" />
+    <Compile Include="Water\Terrain.cs" />
+    <Compile Include="Water\TerrainShader.cs" />
     <Compile Include="Water\Water.cs" />
     <Compile Include="Water\WaterShader.cs" />
     <EmbeddedResource Include="Form1.resx">

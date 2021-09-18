@@ -25,6 +25,9 @@ namespace WindowsFormsApp1.Water
         public Water WaterModel { get; set; }
         public WaterShader WaterShader { get; set; }
 
+        public Terrain TerrainModel { get; set; }
+        public TerrainShader TerrainShader { get; set; }
+
 
 
         public void Init(IntPtr windowHandle)
@@ -73,6 +76,13 @@ namespace WindowsFormsApp1.Water
             WaterShader = new WaterShader();
             if (!WaterShader.Init(D3D.Device, windowHandle))
                 Debug.Assert(false);
+
+            TerrainModel = new Terrain();
+            if (!TerrainModel.Initialize(D3D.Device, "hm.bmp", "cm.bmp", 20.0f, "dirt04.bmp", "normal01.bmp"))
+                Debug.Assert(false);
+            TerrainShader = new TerrainShader();
+            if (!TerrainShader.Initialize(D3D.Device, windowHandle))
+                 Debug.Assert(false);
         }
 
         public bool UpdateInput()
@@ -121,9 +131,9 @@ namespace WindowsFormsApp1.Water
             Matrix projectionMatrix = D3D.ProjectionMatrix;
 
             //// Render the terrain using the reflection shader and the refraction clip plane to produce the refraction effect.
-            //TerrainModel.Render(D3D.DeviceContext);
-            //if (!ReflectionShader.Render(D3D.DeviceContext, TerrainModel.IndexCount, worldMatrix, viewMatrix, projectionMatrix, TerrainModel.ColorTexture.TextureResource, TerrainModel.NormalMapTexture.TextureResource, Light.DiffuseColour, Light.Direction, 2.0f, clipPlane))
-            //    return false;
+            TerrainModel.Render(D3D.DeviceContext);
+            if (!ReflectionShader.Render(D3D.DeviceContext, TerrainModel.IndexCount, worldMatrix, viewMatrix, projectionMatrix, TerrainModel.ColorTexture.TextureResource, TerrainModel.NormalMapTexture.TextureResource, Light.DiffuseColour, Light.Direction, 2.0f, clipPlane))
+                return false;
 
             // Reset the render target back to the original back buffer and not the render to texture anymore.
             D3D.SetBackBufferRenderTarget();
@@ -248,7 +258,11 @@ namespace WindowsFormsApp1.Water
             // Reset the world matrix.
             worldMatrix = D3D.WorldMatrix;
 
-      
+            // Render the terrain using the terrain shader.
+            TerrainModel.Render(D3D.DeviceContext);
+            if (!TerrainShader.Render(D3D.DeviceContext, TerrainModel.IndexCount, worldMatrix, viewCameraMatrix, projectionMatrix, TerrainModel.ColorTexture.TextureResource, TerrainModel.NormalMapTexture.TextureResource, Light.DiffuseColour, Light.Direction, 2.0f))
+                return false;
+
             // Translate to the location of the water and render it.
             Matrix.Translation(240.0f, WaterModel.WaterHeight, 250.0f, out worldMatrix);
             WaterModel.Render(D3D.DeviceContext);
@@ -291,6 +305,12 @@ namespace WindowsFormsApp1.Water
 
             WaterModel?.Destroy();
             WaterModel = null;
+
+            TerrainModel?.ShutDown();
+            TerrainModel = null;
+
+            TerrainShader?.ShutDown();
+            TerrainShader = null;
         }
         private bool HandleInput(float frameTime)
         {
